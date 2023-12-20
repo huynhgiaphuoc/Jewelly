@@ -1,0 +1,466 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Reuse Css */
+
+:root {
+    /* Color */
+    /* Transition */
+    --tran-02: all .2s ease;
+    --tran-03: all .3s ease;
+    --tran-04: all .4s ease;
+    --tran-05: all .5s ease;
+}
+
+/* Black movement button */
+.btn--dark--model {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid #1c1c1c;
+    z-index: 1;
+    transition: color 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86),border 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    color: #fff;
+    margin-left: 1.5em;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+
+    .btn--dark--model:hover::before {
+        transform: scale(0,1);
+        transform-origin: right center;
+    }
+
+    .btn--dark--model::before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        transform: scale(1,1);
+        z-index: -1;
+        transform-origin: left center;
+        transition: transform 0.45s cubic-bezier(.785, .135, .15, .86), -webkit-transform .45s cubic-bezier(.785, .135, .15, .86);
+        background-color: #1c1c1c;
+    }
+
+    .btn--dark--model:hover {
+        background-color: #fff;
+        color: #1c1c1c;
+        border-color: #1c1c1c;
+    }
+
+
+/* Scroll to top button */
+.scrollTop {
+    position: fixed;
+    bottom: 800px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background: url(../Image/upicon.png);
+    background-size: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 1000000;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+
+    .scrollTop.active {
+        bottom: 40px;
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+/* If the text is too long, three dots will be displayed */
+.long--dots {
+    font-weight: 600;
+    margin-top: -.5em;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Layout Header */
+
+.header-logo {
+    width: 250px;
+    height: 110px;
+}
+
+.sub-menu {
+    color: #fff;
+}
+
+    .sub-menu::after {
+        content: "";
+        position: absolute;
+        background-color: #888;
+        height: 2px;
+        width: 0;
+        left: 0;
+        bottom: 10px;
+        transition: .5s;
+        border-radius: 10px;
+    }
+
+    .sub-menu:hover::after {
+        width: 100%;
+        color: #5ab503;
+    }
+
+    .sub-menu:hover .fa-angle-down {
+        transform: rotate(180deg);
+        transition: .75s;
+    }
+
+#header {
+    height: 110px;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    /* margin-left: 52em;*/
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav, .subnav {
+    list-style-type: none;
+    position: absolute;
+    z-index: 100;
+}
+
+    #nav > li {
+        display: inline-block;
+        margin: 1em 20px 0 20px;
+    }
+
+    #nav li {
+        position: relative;
+    }
+
+    #nav > li > a {
+        color: #000;
+        text-transform: uppercase;
+    }
+
+    #nav li:hover .subnav {
+        display: block;
+    }
+
+    /*#nav .subnav li:hover a {
+    color: #fff;
+    background-color: #5ab503;
+}*/
+
+    .subnav li::after {
+        content: "";
+        position: absolute;
+        background-color: #888;
+        height: 1px;
+        width: 0;
+        left: 0;
+        bottom: 12px;
+        transition: .7s;
+        border-radius: 10px;
+        margin-left: 1em;
+    }
+
+    .subnav li:hover::after {
+        color: #fff;
+        width: 80%;
+    }
+
+.margin-menu {
+    margin: 1em 0 0 0;
+}
+
+#nav li a {
+    text-decoration: none;
+    line-height: 50px;
+    padding: 0;
+    font-family: "Helvetica","Arial",sans-serif;
+    display: block;
+}
+
+.mobilemenu {
+    display: none;
+}
+
+#nav li:hover a {
+    /* background-color: #5ab503; */
+    /* color: #fff; */
+}
+
+#nav .subnav {
+    min-width: 200px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    padding-left: 0;
+}
+
+    #nav .subnav a {
+        color: #000;
+        padding: 0 16px;
+        margin: 0 0 0 0;
+        line-height: 3.5em;
+    }
+
+.fa-angle-down {
+    margin-left: 5px;
+}
+
+.user-session {
+    margin-left: 6em;
+}
+
+.icon-logout {
+    color: #CD486B;
+}
+
+.badge {
+    position: absolute;
+    top: 2px;
+    right: -12px;
+    padding: 5px 5px;
+    border-radius: 50%;
+    background: #1c1c1c;
+    color: white;
+}
+
+.right-menu {
+    margin-left: 25em;
+    margin-right: -1.5em;
+}
+
+
+/* Home */
+.carousel_bg{
+    width: 100%;
+    height: 48em;
+}
+.edit_surf{
+    border-radius: 50%;
+    height: 0.7em !important;
+    width: 0.7em !important;
+    margin-left: 0.4em !important;
+    z-index: 100;
+}
+
+
+    .edit_surf::after {
+        content: "";
+        position: absolute;
+        background-color: transparent;
+        border-radius: 50%;
+        height: 1.2em !important;
+        width: 1.2em !important;
+        left: 47.23%;
+        bottom: 5.8px;
+        transition: .5s;
+        border-radius: 10px;
+        border: 1px solid #808080;
+      
+        z-index: 0;
+    }
+
+  
+.edit_surf1 {
+    border-radius: 50%;
+    height: 0.7em !important;
+    width: 0.7em !important;
+    margin-left: 0.7em !important;
+    z-index: 100;
+}
+
+
+    .edit_surf1::after {
+        content: "";
+        position: absolute;
+        background-color: transparent;
+        border-radius: 50%;
+        height: 1.2em !important;
+        width: 1.2em !important;
+        left: 49.34%;
+        bottom: 5.8px;
+        transition: .5s;
+        border-radius: 10px;
+        border: 1px solid #808080;
+      
+        z-index: 0;
+    }
+
+ 
+.edit_surf2 {
+    border-radius: 50%;
+    height: 0.7em !important;
+    width: 0.7em !important;
+    margin-left: 0.7em !important;
+    z-index: 100;
+}
+
+
+    .edit_surf2::after {
+        content: "";
+        position: absolute;
+        background-color: transparent;
+        border-radius: 50%;
+        height: 1.2em !important;
+        width: 1.2em !important;
+        left: 51.46%;
+        bottom: 5.8px;
+        transition: .5s;
+        border-radius: 10px;
+        border: 1px solid #808080;
+      
+        z-index: 0;
+    }
+
+  
+
+.btn_details_casourel {
+    bottom: 7em;
+    position: absolute;
+    left: 45%;
+    height: 4em;
+    width: 11em;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    font-weight: 600;   
+}
+    .btn_details_casourel:hover {
+        bottom: 7em;
+        position: absolute;
+        left: 45%;
+        height: 4em;
+        width: 11em;
+        background-color: #fff;
+        transition: .5s;
+        border: 1px solid #fff;
+        color: #000;
+        font-weight: 600;
+    }
+.carousel-indicators{
+ 
+}
+/*End Home*/
+/*Login*/
+.sign_layout {
+    background-color: #fff;
+    height: 100em;
+}
+.title_sign {
+    text-align: center;
+    position: relative;
+    top: 10em;
+}
+.para_title{
+    display: inline-block;
+}
+    .para_title li {
+        display: inline-block;
+        position: relative;
+        margin: 1em 30px 0 -5px;
+    }
+.confirm_space {
+   
+    cursor: pointer; 
+    font-weight: 600;
+}
+
+.confirm_space1 {
+    cursor: pointer;
+    font-weight: 600;
+}
+.para_title li a {
+    color: #808080;
+    text-decoration: none;
+  
+}
+
+
+
+.form_edits {
+  
+    display: inline-block;
+}
+.form_poc {
+    top: 13em;
+    position: relative;
+    text-align: center;
+}
+.input_edits {
+    width: 25em;
+    height: 2.5em;
+    background: #fff;
+    border: 1px solid;
+}
+.form_edits p {
+    text-align: justify;
+    font-size: smaller;
+    font-weight: 600;
+    font-family: system-ui;
+    top: 1em;
+    position: relative
+}
+.btn_text_left{
+    margin-top: 20px;
+    float: left;
+    width: 5em;
+    height: 2em;
+    background-color: black;
+    color: #fff;
+    border-radius: 0.2em
+}
+.name_input{
+    display: flex;
+    justify-content: space-between;
+
+}
+.forget_pass {
+    float: right;
+    color: black;
+    margin-top: 10px;
+}
+.input_name {
+    width: 12em;
+    height: 2.5em;
+    background: #e6dbdb;
+    border: none;
+    border-radius: 3px;
+    
+}
+.space_input_login{
+    margin-top: 10px;
+}
+.space_input_login p b{
+    color: red;
+}
+
+
+
+/*End Login*/

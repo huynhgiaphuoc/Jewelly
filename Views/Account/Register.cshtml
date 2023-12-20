@@ -1,0 +1,97 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    <style>
+        .confirm_space1::after {
+            content: "";
+            position: absolute;
+            background-color: #888;
+            height: 2px;
+            width: 0;
+            left: 0;
+            top: 25px;
+            transition: .5s;
+            border-radius: 10px;
+        }
+
+        .confirm_space1::after {
+            width: 100%;
+            color: red;
+        }
+
+        .confirm_space1.fa-angle-down {
+            transform: rotate(180deg);
+            transition: .75s;
+        }
+    </style>
+}
+
+<div class="sign_layout" id="displaysignin" data-aos="fade-left" data-aos-duration="5000">
+    <div class="title_sign">
+        <ul class="para_title">
+
+            <li><a id="signup" class="confirm_space">Login</a></li>
+            <li><a class="confirm_space1"  style="color: black;">Register</a></li>
+        </ul>
+    </div>
+    <div class="form_poc">
+        @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form_edits" }))
+        {
+            @Html.AntiForgeryToken()
+
+
+            <div class="name_input">
+                <div>
+                    <p><red style="color: red">*</red>FIRST NAME</p>
+                    <input class="input_name" type="text" name="userFname" placeholder="First Name"/>
+                </div>
+                <div>
+                    <p><red style="color: red">*</red>LAST NAME</p>
+                    <input class="input_name" type="text" name="userLname" placeholder="Last Name"/>
+                </div>
+
+            </div>
+            <div class="space_input_login">
+                <p><red style="color: red">*</red>ADDRESS</p>
+                <input class="input_edits" type="text" name="address" />
+            </div>
+            <div class="space_input_login">
+                <p><red style="color: red">*</red>CITY</p>
+                <input class="input_edits" type="text" name="city" />
+            </div>
+
+            <div class="space_input_login">
+                <p><red style="color: red">*</red>PHONE</p>
+                <input class="input_edits" type="text" name="mobNo" />
+            </div>
+            <div class="space_input_login">
+                <p><red style="color: red">*</red>EMAIL ADDRESS</p>
+                <input class="input_edits" type="email" name="emailID" />
+            </div>
+            <div class="space_input_login">
+                <p><red style="color: red">*</red>BIRTHDAY</p>
+                <input class="input_edits" type="date" name="dob" />
+            </div>
+            <div class="space_input_login">
+                <p><red style="color: red">*</red>USERNAME</p>
+                <input class="input_edits" type="text" name="Username" />
+            </div>
+            <div class="space_input_login">
+                <p><red style="color: red">*</red>PASSWORD</p>
+                <input class="input_edits" type="password" name="password" />
+            </div>
+            <div>
+                <a class="forget_pass">Fogret Password ?</a>
+                <button type="submit" class="btn btn--dark--model" style="margin-left: 0;margin-top: 1em">Sign In</button>
+
+
+            </div>
+        }
+    </div>
+</div>
+<script>
+  AOS.init();
+    $("#signup").click(function () {
+        $("#displaysignin").load("Login", "Account");
+    });
+</script>
