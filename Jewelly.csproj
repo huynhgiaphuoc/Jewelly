@@ -97,8 +97,42 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Css\Style.css" />
-    <Content Include="Content\Image\Homepage_Layouttest\casourel.jpg" />
-    <Content Include="Content\Image\Homepage_Layouttest\diamond_ring.jpg" />
+    <Content Include="Content\Image\Home\1.png" />
+    <Content Include="Content\Image\Home\2.png" />
+    <Content Include="Content\Image\Home\3.png" />
+    <Content Include="Content\Image\Home\banner.png" />
+    <Content Include="Content\Image\Home\banner1.png" />
+    <Content Include="Content\Image\Home\banner2.png" />
+    <Content Include="Content\Image\Home\banner3.png" />
+    <Content Include="Content\Image\Home\bns.jpg" />
+    <Content Include="Content\Image\Home\Bracelets.jpg" />
+    <Content Include="Content\Image\Home\casourel.jpg" />
+    <Content Include="Content\Image\Home\clsBracelet.jpg" />
+    <Content Include="Content\Image\Home\clseardrop.jpg" />
+    <Content Include="Content\Image\Home\clsnecklace.jpg" />
+    <Content Include="Content\Image\Home\clsring.jpg" />
+    <Content Include="Content\Image\Home\mau1.jpg" />
+    <Content Include="Content\Image\Home\mau2.jpg" />
+    <Content Include="Content\Image\Home\mau3.jpg" />
+    <Content Include="Content\Image\Home\mau4.jpg" />
+    <Content Include="Content\Image\Home\mau5.jpg" />
+    <Content Include="Content\Image\Home\mau6.jpg" />
+    <Content Include="Content\Image\Home\MAU7.jpg" />
+    <Content Include="Content\Image\Home\Necklaces&amp;Pendants.jpg" />
+    <Content Include="Content\Image\Home\Pearl_Rings.jpg" />
+    <Content Include="Content\Image\Home\RingDiamond.jpg" />
+    <Content Include="Content\Image\Home\vong1.jpg" />
+    <Content Include="Content\Image\Home\vong1_2.jpg" />
+    <Content Include="Content\Image\Home\vong2.jpg" />
+    <Content Include="Content\Image\Home\vong22.jpg" />
+    <Content Include="Content\Image\Home\vong3_3.jpg" />
+    <Content Include="Content\Image\Home\vongd.jpg" />
+    <Content Include="Content\Image\Home\vongd2.jpg" />
+    <Content Include="Content\Image\Home\vongt.jpg" />
+    <Content Include="Content\Image\Home\vongt2.jpg" />
+    <Content Include="Content\Image\Home\vongx.jpg" />
+    <Content Include="Content\Image\Home\vongx_2.jpg" />
+    <Content Include="Content\Image\Home\Yash_Earrings.jpg" />
     <Content Include="Content\Image\Layout\logo-header.png" />
     <Content Include="Global.asax" />
     <Content Include="Models\JewellyDbContext.Context.tt">
@@ -227,7 +261,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
-    <Folder Include="Content\Image\Home\" />
     <Folder Include="Content\Script\" />
   </ItemGroup>
   <ItemGroup>
