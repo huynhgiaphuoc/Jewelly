@@ -105,6 +105,13 @@
     <Content Include="Content\Image\Home\banner2.png" />
     <Content Include="Content\Image\Home\banner3.png" />
     <Content Include="Content\Image\Home\bns.jpg" />
+    <Content Include="Content\Image\Home\bo1.jpg" />
+    <Content Include="Content\Image\Home\bo11.jpg" />
+    <Content Include="Content\Image\Home\bo2.jpg" />
+    <Content Include="Content\Image\Home\bo22.jpg" />
+    <Content Include="Content\Image\Home\bo3.jpg" />
+    <Content Include="Content\Image\Home\bo4.jpg" />
+    <Content Include="Content\Image\Home\bo41.jpg" />
     <Content Include="Content\Image\Home\Bracelets.jpg" />
     <Content Include="Content\Image\Home\casourel.jpg" />
     <Content Include="Content\Image\Home\clsBracelet.jpg" />
@@ -118,6 +125,7 @@
     <Content Include="Content\Image\Home\mau5.jpg" />
     <Content Include="Content\Image\Home\mau6.jpg" />
     <Content Include="Content\Image\Home\MAU7.jpg" />
+    <Content Include="Content\Image\Home\nec1.jpg" />
     <Content Include="Content\Image\Home\Necklaces&amp;Pendants.jpg" />
     <Content Include="Content\Image\Home\Pearl_Rings.jpg" />
     <Content Include="Content\Image\Home\RingDiamond.jpg" />

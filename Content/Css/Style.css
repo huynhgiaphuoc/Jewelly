@@ -581,25 +581,31 @@ div.desc {
 .bns{
     text-align: center;
 }
-    .bns p {
+.bns p {
         font-size: 1.5em;
         font-family: auto;
         margin-left: 2em;
         margin-top: 3em;
     }
-    .bns button {
+.bns button {
         margin-top: 3em;
         width: 9em;
         height: 3em;
         border-radius: 5em;
         background: transparent;
         border: 1px solid;
-    }
-    .bns button:hover {
+}
+.bns button:hover {
        color: #000;
        background-color: #fff;
        border: 1px solid #fff;
     }
+.edit_space{
+    margin-top: 3em;
+}
+.edit_space_g{
+    margin-top: 30em;
+}
 /*End Home*/
 /*Login*/
 .sign_layout {
